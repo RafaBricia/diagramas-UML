@@ -6,10 +6,10 @@ Este repositório contém a modelagem UML baseada no projeto acadêmico [casaHor
 
 Estamos desenvolvendo quatro tipos principais de diagramas UML para representar diferentes visões do sistema:
 
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/main/Diagrama_Classe'>**Diagrama de Classes**</a> – estrutura e relacionamentos entre as entidades do sistema.
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/main/Diagrama_Objeto'>**Diagrama de Objetos**</a> – instâncias das classes em um determinado momento da execução.
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/main/Diagrama_Sequencia'>**Diagrama de Sequência**</a> – fluxo de interações entre os objetos durante os processos.
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/main/Diagrama_casoDeUso'>**Diagrama de Casos de Uso**</a> – funcionalidades do sistema a partir da perspectiva do usuário.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/master/Diagrama_Classe'>**Diagrama de Classes**</a> – estrutura e relacionamentos entre as entidades do sistema.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/master/Diagrama_Objeto'>**Diagrama de Objetos**</a> – instâncias das classes em um determinado momento da execução.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/master/Diagrama_Sequencia'>**Diagrama de Sequência**</a> – fluxo de interações entre os objetos durante os processos.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/master/Diagrama_caso_de_uso'>**Diagrama de Casos de Uso**</a> – funcionalidades do sistema a partir da perspectiva do usuário.
 
 ## Ferramenta Utilizada
 
