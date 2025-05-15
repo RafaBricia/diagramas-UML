@@ -1,1 +1,0 @@
-<img src="Diagrama objetos.png" alt="Diagrama de Sequência">

@@ -1,1 +1,0 @@
-<img src="Diagrama caso de uso.png" alt="Diagrama de Sequência">
