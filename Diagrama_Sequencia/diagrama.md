@@ -1,0 +1,1 @@
+<img src="DiagramaDeSequencia.png" alt="Diagrama de Sequência">

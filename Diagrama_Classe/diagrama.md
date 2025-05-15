@@ -1,0 +1,1 @@
+<img src="Diagrama de Classes.png" alt="Diagrama de Sequência">
