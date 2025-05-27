@@ -6,10 +6,11 @@ Este repositório contém a modelagem UML baseada no projeto acadêmico [casaHor
 
 Estamos desenvolvendo quatro tipos principais de diagramas UML para representar diferentes visões do sistema:
 
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_pacotes'>**Diagrama de Pacotes** </a>– organização modular das classes em pacotes, com suas dependências lógicas.
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_Atividades'>**Diagrama de Atividades**</a> – representa o fluxo de atividades ou processos de negócios.
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_Componentes'>**Diagrama de Componentes**</a> – estrutura física do sistema, com seus componentes e interdependências.
-- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_Maquina_Estados'>**Diagrama de Máquina de Estados**</a> – estados possíveis de um objeto e suas transições com base em eventos.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_pacotes'>**Diagrama de Pacotes** </a>– organiza o sistema em pacotes modulares e mostra suas dependências.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_Atividades'>**Diagrama de Atividades**</a> – mostra o fluxo de ações ou decisões de um processo.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_Componentes'>**Diagrama de Componentes**</a> – mostra os componentes físicos do sistema e suas dependências.
+- <a href='https://github.com/RafaBricia/diagramas-UML/tree/fase2/Diagrama_Maquina_Estados'>**Diagrama de Máquina de Estados**</a> – representa os estados possíveis de um objeto e suas transições com base em eventos.
+
 ## Ferramenta Utilizada
 
 Para a criação dos diagramas, utilizamos a ferramenta **Lucidchart**, que facilita a modelagem visual e a colaboração entre os integrantes do projeto.
