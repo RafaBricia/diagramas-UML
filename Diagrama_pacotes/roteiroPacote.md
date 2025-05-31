@@ -1,75 +1,79 @@
-# 🧱 Diagrama de Pacotes — Detalhado
+# 🧾 Roteiro Explicativo do Diagrama de Pacotes – Sistema Web (Frontend + Backend + Database)
 
-🎯 **Objetivo**: Organizar as classes em pacotes modulares e mostrar dependências lógicas.
+## 📁 1. FRONTEND
+Estrutura organizada em três grandes divisões dentro da pasta `src`:
 
----
+### 1.1. `pages`
+Contém as páginas principais da aplicação (ex: login, cadastro, home, perfil, detalhes do produto e carrinho).
 
-## 📦 Pacote: `usuario`
+- Importa componentes (seta: `<<import>>`) da pasta `components` para montar a UI.
+- Importa rotas da pasta `routes` (seta: `<<import>>`) para configurar a navegação interna entre páginas.
+- Utiliza os serviços da pasta `services` (seta: `<<request>>`) para se comunicar com o backend via chamadas HTTP (ex: login, cadastro, obter produtos, etc).
 
-### Classes:
-- `Cliente`
-- `Administrador`
+### 1.2. `components`
+Contém os elementos reutilizáveis da interface, como:
 
-### Interfaces:
-- `Autenticavel`  
-  Métodos: `login()`, `cadastro()`
+- `navbar`, `card`, `modalProduto`, etc.
+- É importado pelas páginas (`pages`) para compor as interfaces.
+- Também pode importar recursos de `assets` (ex: imagens e ícones).
 
----
+### 1.3. `routes`
+Define as rotas e seus respectivos componentes de página.
 
-## 📦 Pacote: `produto`
+- Importado por `pages` ou diretamente no arquivo principal de roteamento (ex: `App.tsx`).
+- Serve para organizar a navegação SPA (Single Page Application).
 
-### Classes:
-- `Produto`
-- `Promocao`
+### 1.4. `services`
+Contém funções responsáveis pelas chamadas HTTP para o backend (ex: `axios`, `fetch`, etc).
 
-### Interfaces:
-- `Visualizavel`  
-  Métodos: `visualizarProdutos()`, `visualizarDetalhes()`
+- Importado por `pages` para enviar e receber dados via API.
+- Seta `<<request>>` conecta `services` ao backend.
 
----
+### 1.5. `assets`
+Contém arquivos estáticos (imagens, ícones, etc.).
 
-## 📦 Pacote: `carrinho`
+- Importado por `components` ou `pages` conforme necessário.
 
-### Classes:
-- `Carrinho`
-- `ItemCarrinho` *(opcional, para controle de quantidade)*
+## 📁 2. BACKEND
+Estruturado na pasta `src` com camadas bem definidas:
 
-### Métodos:
-- `adicionarProduto()`
-- `removerProduto()`
-- `calcularTotal()`
+### 2.1. `routes`
+Contém os arquivos de definição de rotas da API (ex: `/login`, `/produtos`, `/usuarios`).
 
----
+- Importa os `controllers` responsáveis pelas lógicas de cada endpoint (`<<import>>`).
+- Recebe chamadas do frontend, representadas por uma seta `<<API call>>` partindo de `services` no frontend.
 
-## 📦 Pacote: `pedido`
+### 2.2. `controllers`
+Executam a lógica de negócios com base nas requisições (ex: login, cadastro, CRUD de produtos).
 
-### Classe:
-- `Pedido`
+- Importam os `models` para acessar/manipular dados (`<<import>>`).
+- Processam os dados e retornam respostas para as rotas, que respondem ao frontend.
 
-### Atributos:
-- `id`, `data`, `itens`, `total`
+### 2.3. `models`
+Contêm a definição das entidades e interações com o banco de dados.
 
-### Métodos:
-- `criarPedido()`
-- `confirmarPedido()`
-- `cancelarPedido()`
+- Importam `db/connection` para realizar as queries no banco (`<<connect>>`).
 
----
+### 2.4. `db/connection`
+Define e exporta a configuração de conexão com o banco de dados (ex: Sequelize, Prisma, Knex, etc).
 
-## 📦 Pacote: `sistema`
+- Conecta diretamente ao banco de dados, conforme representado por uma seta `<<connect>>` até o ícone de "Database".
 
-### Componentes:
-- `InterfaceSupermercado`
-- `BancoDeDados` *(simulado)*
-- Classes de controle, sessões e validações
+## 🧪 3. TESTES
+Organizados fora da `src`, na pasta `tests`, com duas divisões:
 
----
+- `unit`: Testa unidades isoladas (ex: controllers, funções puras).
+- `integration`: Testa a integração entre camadas (ex: rota + controller + model).
 
-## 🔁 Dependências Lógicas
+Ambas as pastas de teste importam elementos da `src` para realizar os testes (seta `<<test>>`).
 
-```text
-carrinho --<<import>>--> produto  
-carrinho --<<access>>--> usuario  
-pedido   --<<import>>--> carrinho  
-pedido   --<<import>>--> produto  
-sistema  --<<import>>--> todos os pacotes
+## 🧩 4. INTEGRAÇÃO ENTRE SISTEMAS
+
+### 🔁 Comunicação entre Frontend e Backend
+A seta `<<API call>>` representa as chamadas HTTP feitas por `services` no frontend para `routes` no backend.
+
+
+### 🗄️ Acesso ao Banco de Dados
+O backend acessa o **Database** por meio da estrutura:
+
+routes → controllers → models → db/connection → Database
