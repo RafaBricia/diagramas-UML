@@ -23,11 +23,11 @@ Define as rotas e seus respectivos componentes de página.
 - Importado por `pages` ou diretamente no arquivo principal de roteamento (ex: `App.tsx`).
 - Serve para organizar a navegação SPA (Single Page Application).
 
-### 1.4. `services`
+### 1.4. `config`
 Contém funções responsáveis pelas chamadas HTTP para o backend (ex: `axios`, `fetch`, etc).
 
 - Importado por `pages` para enviar e receber dados via API.
-- Seta `<<request>>` conecta `services` ao backend.
+- Seta `<<request>>` conecta `config` ao backend.
 
 ### 1.5. `assets`
 Contém arquivos estáticos (imagens, ícones, etc.).
